@@ -2,37 +2,108 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-wrapper,
+.menu a {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu a {
+  display: block;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.menu li {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu > li {
+  float: left;
 }
+
+.menu,
+.menu ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background: gold;
+}
+
+.menu ul li + li {
+  border-top: 1px solid #fff;
+}
+
+.menu ul {
+  position: absolute;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu > li ul,
+.menu ul ul {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.menu > li ul {
+  top: 130%;
+  left: 0;
+}
+
+.menu ul ul {
+  left: 130%;
+  top: 0;
+}
+
+.menu ul a {
+  width: 250px;
+}
+
+.menu > li:hover > ul {
+  top: 100%;
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.menu ul > li:hover > ul {
+  left: 100%;
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.menu-gold,
+.menu-gold a {
+  color: #000;
+}
+.menu-gold a:hover {
+  background-color: #e6c300;
+  color: #000;
+}
+
+body {
+  background-image: url("http://recruit.framgia.vn/wp-content/themes/framgia-vn/css/images/bg/banner.jpg");
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 40px;
+}
+/* ends */
