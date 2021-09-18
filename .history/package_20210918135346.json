@@ -1,6 +1,5 @@
 {
   "name": "demo-react-route",
-  "homepage": "http://gitname.github.io/react-gh-pages",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,6 +42,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.21",
-    "@types/react-router-dom": "^5.1.9"
+    "@types/react-router-dom": "^5.1.9",
+    "gh-pages": "^3.2.3"
   }
 }
